@@ -3,15 +3,13 @@ import Card from "../card/Card";
 import data from "../../assets/data.json";
 
 const randomData = [];
-randomData.push(data[Math.floor(Math.random() * data.length)]);
-randomData.push(data[Math.floor(Math.random() * data.length)]);
-randomData.push(data[Math.floor(Math.random() * data.length)]);
-randomData.push(data[Math.floor(Math.random() * data.length)]);
-randomData.push(data[Math.floor(Math.random() * data.length)]);
-randomData.push(data[Math.floor(Math.random() * data.length)]);
-randomData.push(data[Math.floor(Math.random() * data.length)]);
-randomData.push(data[Math.floor(Math.random() * data.length)]);
-console.log(randomData);
+for (let i = 0; i < 8; i++) {
+  let randomItinerary = data[Math.floor(Math.random() * data.length)];
+  while (randomData.includes(randomItinerary)) {
+    randomItinerary = data[Math.floor(Math.random() * data.length)];
+  }
+  randomData.push(randomItinerary);
+}
 
 const Adventures = () => {
   return (

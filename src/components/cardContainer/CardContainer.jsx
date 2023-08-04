@@ -26,9 +26,7 @@ const CardContainer = () => {
   };
   const [filterName, setFilterName] = useState("Favignana");
   const onHandleFilter = (e) => setFilterName(e.target.value);
-  console.log(data);
-  console.log(filterCategory);
-  console.log(filterName);
+
   function name(params) {
     if (filterCategory === "departure") {
       return params.departure.Port === filterName;
