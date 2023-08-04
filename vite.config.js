@@ -9,6 +9,8 @@ export default defineConfig({
       scss: {
         additionalData: `
           @import "./src/shared/scss/colors";
+          @import "./src/shared/scss/typography";
+          @import "./src/shared/scss/elements";
         `,
       },
     },

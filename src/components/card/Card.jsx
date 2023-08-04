@@ -4,14 +4,19 @@ const Card = ({ data }) => {
   return (
     <div className={styles.Card}>
       <div>
-        <p>{data.budget.value} per cabina.</p>
+        <div>
+          <h3>{data.budget.value}€</h3> <span>per cabina.</span>
+        </div>
         <h3>{data.title}</h3>
       </div>
-      <div>
-        <div>in partenza da: {data.departure.port}</div>
+      <div className={styles.card__flex}>
         <div>
-          <p>{data.boatType}</p>
-          <p>{data.numberOfDays} giorni</p>
+          <div className={styles.accent}>in partenza da:</div>
+          <h4>{data.departure.Port}</h4>
+        </div>
+        <div>
+          <p className={styles.bold}>{data.boatType}</p>
+          <p className={styles.bold}>{data.numberOfDays} giorni</p>
         </div>
       </div>
       <div>
@@ -20,10 +25,13 @@ const Card = ({ data }) => {
       </div>
       <div>
         <p>
-          {data.budget.costType}
           {data.reservations}
+          {data.budget.costType === "per cabina" ? " Cabine" : " Persone"}
         </p>
-        <p>disponibilità {data.reservationsAvailable}</p>
+        <p>
+          <span className={styles.accent}>disponibilità </span>
+          <span className={styles.bold}>{data.reservationsAvailable}</span>
+        </p>
       </div>
       <button>Prenota</button>
     </div>

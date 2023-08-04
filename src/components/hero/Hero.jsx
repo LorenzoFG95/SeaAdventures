@@ -3,7 +3,7 @@ import styles from "./index.module.scss";
 const Hero = () => {
   return (
     <div className={styles.Hero}>
-      <h1>Lorem ipsum dolor sit amet.</h1>
+      <h1 className={styles.display}>Lorem ipsum dolor sit amet.</h1>
     </div>
   );
 };

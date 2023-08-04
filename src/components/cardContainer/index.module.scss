@@ -1,3 +1,5 @@
 .CardContainer {
   border: 2px solid teal;
+  display: flex;
+  flex-direction: column;
 }

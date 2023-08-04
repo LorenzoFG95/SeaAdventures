@@ -1,16 +1,16 @@
-.Hero {
+.Info {
   background-image: linear-gradient(
       rgba(10, 40, 80, 0.6),
       rgba(10, 40, 80, 0.6)
     ),
-    url("/images/hero.jpeg");
+    url("/images/banner.jpeg");
   height: 500px;
   background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  h1 {
+  h2 {
     color: white;
   }
 }
