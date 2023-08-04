@@ -46,20 +46,28 @@ const CardContainer = () => {
   const filteredData = data.filter(name);
 
   return (
-    <div className={styles.CardContainer}>
-      <select onChange={onHandleFilterCategory} name="mostraPer" id="mostraPer">
-        <option value="departure">Porto di partenza</option>
-        <option value="numberOfDays">n° di giorni</option>
-        <option value="boatType">Tipo di imbarcazione</option>
-        <option value="reservationsAvailable">Disponibilità</option>
-      </select>
-      <select onChange={onHandleFilter} name="mostraPer" id="mostraPer">
-        {filterSwitch(filterCategory)}
-      </select>
-      {filteredData.map((itinerary) => (
-        <Card key={crypto.randomUUID()} data={itinerary} />
-      ))}
-    </div>
+    <>
+      <div className={styles.select_container}>
+        <select
+          onChange={onHandleFilterCategory}
+          name="mostraPer"
+          id="mostraPer"
+        >
+          <option value="departure">Porto di partenza</option>
+          <option value="numberOfDays">n° di giorni</option>
+          <option value="boatType">Tipo di imbarcazione</option>
+          <option value="reservationsAvailable">Disponibilità</option>
+        </select>
+        <select onChange={onHandleFilter} name="mostraPer" id="mostraPer">
+          {filterSwitch(filterCategory)}
+        </select>
+      </div>
+      <div className={styles.CardContainer}>
+        {filteredData.map((itinerary) => (
+          <Card key={crypto.randomUUID()} data={itinerary} />
+        ))}
+      </div>
+    </>
   );
 };
 

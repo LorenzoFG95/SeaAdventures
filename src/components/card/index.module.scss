@@ -1,12 +1,13 @@
 .Card {
-  border: 2px solid red;
   background-color: $color-background;
   width: 400px;
   height: 350;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
+  border-radius: 12px;
+  color: $color-primary;
 
   .card__flex {
     display: flex;
@@ -17,5 +18,8 @@
   }
   .bold {
     font-weight: 600;
+  }
+  svg {
+    transform: scale(2);
   }
 }

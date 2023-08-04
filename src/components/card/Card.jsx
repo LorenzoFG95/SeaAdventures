@@ -11,7 +11,7 @@ const Card = ({ data }) => {
       </div>
       <div className={styles.card__flex}>
         <div>
-          <div className={styles.accent}>in partenza da:</div>
+          <div className={styles.accent}>PARTENZA DA</div>
           <h4>{data.departure.Port}</h4>
         </div>
         <div>
@@ -19,8 +19,19 @@ const Card = ({ data }) => {
           <p className={styles.bold}>{data.numberOfDays} giorni</p>
         </div>
       </div>
-      <div>
+      <div className={styles.card__flex}>
         <div>{data.departureDate}</div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="1em"
+          height="1em"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill="#273049"
+            d="m11.293 17.293l1.414 1.414L19.414 12l-6.707-6.707l-1.414 1.414L15.586 11H6v2h9.586z"
+          />
+        </svg>
         <div>{data.arrivalDate}</div>
       </div>
       <div>
@@ -33,7 +44,7 @@ const Card = ({ data }) => {
           <span className={styles.bold}>{data.reservationsAvailable}</span>
         </p>
       </div>
-      <button>Prenota</button>
+      <button>PRENOTA</button>
     </div>
   );
 };

@@ -1,3 +1,20 @@
+.Adventures__container {
+  padding: 20px;
+  h2 {
+    margin: 20px 0 30px;
+  }
+}
 .Adventures {
-  border: 2px solid rebeccapurple;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .Adventures {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
