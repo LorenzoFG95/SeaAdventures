@@ -44,7 +44,7 @@ const CardContainer = () => {
   const filteredData = data.filter(name);
 
   return (
-    <>
+    <div className={styles.CardContainer}>
       <div className={styles.select_container}>
         <select
           onChange={onHandleFilterCategory}
@@ -60,12 +60,12 @@ const CardContainer = () => {
           {filterSwitch(filterCategory)}
         </select>
       </div>
-      <div className={styles.CardContainer}>
+      <div className={styles.CardList}>
         {filteredData.map((itinerary) => (
           <Card key={crypto.randomUUID()} data={itinerary} />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

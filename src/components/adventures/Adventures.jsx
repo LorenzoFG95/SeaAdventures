@@ -14,7 +14,7 @@ for (let i = 0; i < 8; i++) {
 const Adventures = () => {
   return (
     <div className={styles.Adventures__container}>
-      <h2>Avventure da scoprire</h2>
+      <h2 className={styles.Adventures__title}>Avventure da scoprire</h2>
       <div className={styles.Adventures}>
         {randomData.map((itinerary) => (
           <Card key={itinerary.id} data={itinerary} />

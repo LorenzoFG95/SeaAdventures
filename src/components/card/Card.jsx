@@ -20,7 +20,10 @@ const Card = ({ data }) => {
         </div>
       </div>
       <div className={styles.card__flex}>
-        <div>{data.departureDate}</div>
+        <div>
+          <p>{data.departureDate.split(" ")[0]}</p>
+          <p className={styles.accent}>{data.departureDate.split(" ")[1]}</p>
+        </div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="1em"
@@ -32,7 +35,10 @@ const Card = ({ data }) => {
             d="m11.293 17.293l1.414 1.414L19.414 12l-6.707-6.707l-1.414 1.414L15.586 11H6v2h9.586z"
           />
         </svg>
-        <div>{data.arrivalDate}</div>
+        <div>
+          <p>{data.arrivalDate.split(" ")[0]}</p>
+          <p className={styles.accent}>{data.arrivalDate.split(" ")[1]}</p>
+        </div>
       </div>
       <div>
         <p>
